@@ -28,5 +28,6 @@ class Handler(BaseHTTPRequestHandler):
 
         self.wfile.write(payload)
 
-HTTPServer(("",3000), Handler).serve_forever()
+if __name__ == "__main__":
+    HTTPServer(("",3000), Handler).serve_forever()
 
